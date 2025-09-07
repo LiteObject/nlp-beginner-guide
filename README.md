@@ -2,6 +2,24 @@
 
 **What is NLP? A Super Simple Guide to Natural Language Processing (with Examples!)**
 
+## Repository Structure
+
+- **You are here →** `README.md` - Start here if you're completely new to NLP!
+- `nlp-technical-guide.md` - Deep dive into technical concepts and implementation
+- `examples/` - Code examples and notebooks
+- `INTRO.md` - Alternative introduction format
+
+## Learning Path
+
+| If you want to... | Read this section |
+|-------------------|-------------------|
+| Understand what NLP is | You're in the right place! |
+| Build your first NLP project | See [Technical Guide - Getting Started](./nlp-technical-guide.md) |
+| Learn about specific algorithms | See [Technical Guide - Key Techniques](./nlp-technical-guide.md#key-nlp-techniques) |
+| See practical examples | Check out our [examples folder](./examples/) |
+
+---
+
 Hey there!  
 Ever chatted with Siri, Alexa, or Google Assistant? Or noticed how Gmail finishes your sentences? That's all thanks to something called **NLP** — **Natural Language Processing**.
 
@@ -245,6 +263,12 @@ The goal? Making human-computer communication as natural as talking to a friend.
 ---
 
 ## Want to Learn More?
+
+**Ready for the technical details?** Check out our [Technical Guide](./nlp-technical-guide.md) for:
+- Detailed explanations of algorithms
+- Python implementation examples
+- Step-by-step project tutorials
+- Popular NLP libraries and tools
 
 Here are some fun next steps:
 - Try Google's "Teachable Machine" for simple NLP experiments

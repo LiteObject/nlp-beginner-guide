@@ -1,5 +1,7 @@
 # Complete Guide to Natural Language Processing (NLP)
 
+> **New to NLP?** Start with our [beginner-friendly introduction](./README.md) for a gentler overview!
+
 ## What is Natural Language Processing?
 
 **Natural Language Processing (NLP)** is a branch of artificial intelligence that helps computers understand, interpret, and generate human language. Think of it as teaching computers to "read" and "write" like humans do.
@@ -33,6 +35,8 @@ Before computers can understand text, we need to clean it up, just like washing 
 ### 2. Part-of-Speech Tagging (POS)
 This identifies what type of word each word is (noun, verb, adjective, etc.).
 
+> **Note:** We covered this concept simply in our [beginner guide](./README.md#4-part-of-speech-pos-tagging--labeling-words-as-nouns-verbs-etc). Here we'll explore the technical implementation.
+
 **Example:**
 - "The quick brown fox jumps" 
 - The (determiner) quick (adjective) brown (adjective) fox (noun) jumps (verb)
@@ -42,12 +46,16 @@ This identifies what type of word each word is (noun, verb, adjective, etc.).
 ### 3. Named Entity Recognition (NER)
 This finds and classifies important information in text like names, places, dates, and organizations.
 
+> **Note:** We introduced this concept in our [beginner guide](./README.md#5-named-entity-recognition-ner--finding-names-of-people-places-dates-etc). Here we'll dive deeper into implementation details.
+
 **Example:**
 - "Apple Inc. was founded by Steve Jobs in California in 1976"
 - Apple Inc. (Organization), Steve Jobs (Person), California (Location), 1976 (Date)
 
 ### 4. Sentiment Analysis
 This determines the emotional tone of text - is it positive, negative, or neutral?
+
+> **Note:** We explained this concept with simple examples in our [beginner guide](./README.md#6-sentiment-analysis--figuring-out-if-something-is-positive-negative-or-neutral). Here we'll explore technical approaches.
 
 **Examples:**
 - "I love this movie!" → Positive
@@ -57,6 +65,8 @@ This determines the emotional tone of text - is it positive, negative, or neutra
 ### 5. Text Classification
 This sorts text into predefined categories, like organizing emails into folders.
 
+> **Note:** This concept was covered in our [beginner guide](./README.md#7-text-classification--sorting-text-into-categories). Here we'll explore the technical implementation.
+
 **Examples:**
 - Email classification: Spam vs. Not Spam
 - News categorization: Sports, Politics, Technology
@@ -64,6 +74,8 @@ This sorts text into predefined categories, like organizing emails into folders.
 
 ### 6. Machine Translation
 This converts text from one language to another while preserving meaning.
+
+> **Note:** We touched on this in our [beginner guide](./README.md#8-machine-translation--translating-one-language-to-another). Here we'll explore the technical approaches.
 
 **Example:**
 - English: "How are you?"
@@ -73,6 +85,8 @@ This converts text from one language to another while preserving meaning.
 ### 7. Question Answering
 This involves understanding questions and finding relevant answers from text.
 
+> **Note:** We covered this concept in our [beginner guide](./README.md#10-question-answering--getting-specific-answers-from-text). Here we'll explore implementation approaches.
+
 **Example:**
 - Question: "Who invented the telephone?"
 - Text: "Alexander Graham Bell invented the telephone in 1876."
@@ -80,6 +94,8 @@ This involves understanding questions and finding relevant answers from text.
 
 ### 8. Text Summarization
 This creates shorter versions of longer texts while keeping the main points.
+
+> **Note:** This concept was introduced in our [beginner guide](./README.md#9-text-summarization--making-long-text-short). Here we'll explore the technical implementation.
 
 **Two types:**
 - **Extractive**: Picking the most important sentences from the original text
@@ -107,6 +123,8 @@ This measures how important a word is in a document compared to a collection of 
 ### 3. Word Embeddings
 These convert words into numbers (vectors) that capture meaning and relationships.
 
+> **Note:** We introduced this concept with the famous "King - Man + Woman = Queen" example in our [beginner guide](./README.md#15-word-embeddings--turning-words-into-numbers-computers-understand). Here we'll dive deeper into the technical details.
+
 **Key insight:** Words with similar meanings get similar numbers.
 
 **Popular methods:**
@@ -128,6 +146,8 @@ These are sequences of N consecutive words that help capture some context.
 
 ### 5. Language Models
 These predict the next word in a sequence, helping computers understand natural language patterns.
+
+> **Note:** We explained this concept as "super-smart autocomplete systems" in our [beginner guide](./README.md#12-language-models--the-brain-behind-modern-ai). Here we'll explore the technical implementation.
 
 **Example:**
 - Given "The weather is very", predict "hot", "cold", "nice", etc.
@@ -271,6 +291,8 @@ Better support for low-resource languages and cross-language understanding.
 ## Conclusion
 
 Natural Language Processing is a rapidly evolving field that's making computers better at understanding and generating human language. While the concepts can seem complex, breaking them down into smaller pieces makes them much more manageable.
+
+If you started with our [beginner guide](./README.md), you've already learned the fundamental concepts that make NLP possible. This technical guide has shown you how those concepts work under the hood and how to implement them in practice.
 
 The key to success in NLP is to start simple, practice regularly, and gradually build up your knowledge and skills. Whether you're interested in building chatbots, analyzing social media sentiment, or creating the next generation of search engines, NLP provides the tools and techniques to make it possible.
 
