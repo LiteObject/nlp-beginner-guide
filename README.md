@@ -7,7 +7,6 @@
 - **You are here →** `README.md` - Start here if you're completely new to NLP!
 - `nlp-technical-guide.md` - Deep dive into technical concepts and implementation
 - `examples/` - Code examples and notebooks
-- `INTRO.md` - Alternative introduction format
 
 ## Learning Path
 
