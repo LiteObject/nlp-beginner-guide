@@ -15,7 +15,9 @@
 | Understand what NLP is | You're in the right place! |
 | Build your first NLP project | See [Technical Guide - Getting Started](./nlp-technical-guide.md) |
 | Learn about specific algorithms | See [Technical Guide - Key Techniques](./nlp-technical-guide.md#key-nlp-techniques) |
-| See practical examples | Check out our [examples folder](./examples/) |
+| Get hands-on practice | Check out our [examples folder](./examples/) |
+| Try sentiment analysis | Start with [Sentiment Analysis notebook](./examples/sentiment_analysis.ipynb) |
+| Learn text preprocessing | See [Preprocessing notebook](./examples/preprocessing.ipynb) |
 
 ---
 
@@ -50,6 +52,8 @@ Think of it like cutting a pizza into slices.
 
 Computers need to break things down before they can understand them.
 
+**Try it yourself:** Check out our [Preprocessing notebook](./examples/preprocessing.ipynb) for hands-on practice!
+
 ---
 
 ### 2. **Stop Words** → Words we ignore because they're too common
@@ -74,6 +78,8 @@ Like turning "running", "ran", "runs" → all into "run".
 > Example:  
 > "I am running to the store. She runs fast." → Both become "run"
 
+**Try it yourself:** See our [Preprocessing notebook](./examples/preprocessing.ipynb) for practical examples!
+
 ---
 
 ### 4. **Part-of-Speech (POS) Tagging** → Labeling words as nouns, verbs, etc.
@@ -95,6 +101,8 @@ Helps computers understand sentence structure.
 
 Super useful for pulling facts from text!
 
+**Try it yourself:** Check out our [NER notebook](./examples/ner.ipynb) for hands-on practice!
+
 ---
 
 ### 6. **Sentiment Analysis** → Figuring out if something is positive, negative, or neutral
@@ -104,6 +112,8 @@ Super useful for pulling facts from text!
 > Tweet: *"This update is terrible."* → Negative
 
 Used by companies to see how people feel about their products.
+
+**Try it yourself:** See our [Sentiment Analysis notebook](./examples/sentiment_analysis.ipynb) for practical examples!
 
 ---
 
@@ -116,6 +126,8 @@ Like organizing emails into folders automatically.
 > Email from your mom → Personal folder
 
 Goes beyond just positive/negative — can sort into any categories you want!
+
+**Try it yourself:** Explore our [Text Classification notebook](./examples/text_classification.ipynb) for hands-on learning!
 
 ---
 
@@ -201,6 +213,8 @@ Computers can't read words — only numbers. So we turn words into "vectors" (fa
 > (Yes, computers can do math with words!)
 
 Popular models: Word2Vec, GloVe, BERT
+
+**Try it yourself:** Dive into our [Word Embeddings notebook](./examples/word_embeddings.ipynb) to see the magic!
 
 ---
 

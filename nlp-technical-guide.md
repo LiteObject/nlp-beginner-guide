@@ -32,6 +32,8 @@ Before computers can understand text, we need to clean it up, just like washing 
 - **Stop word removal**: Removing common words like "the", "and", "is"
   - Example: "The cat is sleeping" → "cat sleeping"
 
+**Hands-on practice:** See our [Preprocessing notebook](./examples/preprocessing.ipynb) for detailed implementation examples.
+
 ### 2. Part-of-Speech Tagging (POS)
 This identifies what type of word each word is (noun, verb, adjective, etc.).
 
@@ -51,6 +53,8 @@ This finds and classifies important information in text like names, places, date
 **Example:**
 - "Apple Inc. was founded by Steve Jobs in California in 1976"
 - Apple Inc. (Organization), Steve Jobs (Person), California (Location), 1976 (Date)
+
+**Hands-on practice:** Explore our [NER notebook](./examples/ner.ipynb) for practical implementations.
 
 ### 4. Sentiment Analysis
 This determines the emotional tone of text - is it positive, negative, or neutral?
@@ -104,6 +108,8 @@ for text in texts:
     sentiment = analyze_sentiment(text)
     print(f"'{text}' → {sentiment}")
 ```
+
+**Hands-on practice:** Try our [Sentiment Analysis notebook](./examples/sentiment_analysis.ipynb) for more detailed examples and different approaches.
 
 ### Example 2: Text Preprocessing Pipeline
 
@@ -183,6 +189,8 @@ for text in test_texts:
     prediction = pipeline.predict([text])[0]
     print(f"'{text}' → {prediction}")
 ```
+
+**Hands-on practice:** Explore our [Text Classification notebook](./examples/text_classification.ipynb) for more advanced classification techniques.
 
 ## Evaluation Metrics
 
@@ -314,6 +322,8 @@ These convert words into numbers (vectors) that capture meaning and relationship
 - King - Man + Woman ≈ Queen
 - Paris - France + Italy ≈ Rome
 
+**Hands-on practice:** See our [Word Embeddings notebook](./examples/word_embeddings.ipynb) to explore these concepts with code.
+
 ### 4. N-grams
 These are sequences of N consecutive words that help capture some context.
 
@@ -399,6 +409,8 @@ Language varies across cultures, regions, and specialized fields.
 ### Step 1: Choose a Simple Problem
 Start with sentiment analysis of movie reviews or text classification.
 
+**Recommended starting point:** Our [Sentiment Analysis notebook](./examples/sentiment_analysis.ipynb) provides a complete beginner-friendly walkthrough.
+
 ### Step 2: Gather Data
 Use publicly available datasets like:
 - IMDb movie reviews
@@ -408,11 +420,15 @@ Use publicly available datasets like:
 ### Step 3: Preprocess Your Data
 Clean and prepare your text using the preprocessing techniques mentioned above.
 
+**Learn by doing:** Follow our [Preprocessing notebook](./examples/preprocessing.ipynb) for step-by-step implementation.
+
 ### Step 4: Choose Your Approach
 Start simple with Bag of Words or TF-IDF, then gradually try more complex methods.
 
 ### Step 5: Build and Evaluate
 Create your model, test it, and see how well it performs.
+
+**Practice with examples:** Try our [Text Classification notebook](./examples/text_classification.ipynb) for hands-on model building.
 
 ### Step 6: Iterate and Improve
 Try different techniques, add more data, or adjust your preprocessing.
