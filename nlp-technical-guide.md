@@ -62,7 +62,7 @@ This determines the emotional tone of text - is it positive, negative, or neutra
 - "This product is terrible." → Negative  
 - "The weather is cloudy today." → Neutral
 
-### 5. Text Classification
+### 4. Text Classification
 This sorts text into predefined categories, like organizing emails into folders.
 
 > **Note:** This concept was covered in our [beginner guide](./README.md#7-text-classification--sorting-text-into-categories). Here we'll explore the technical implementation.
@@ -72,7 +72,185 @@ This sorts text into predefined categories, like organizing emails into folders.
 - News categorization: Sports, Politics, Technology
 - Product reviews: 1-5 star ratings
 
-### 6. Machine Translation
+## Quick Code Examples
+
+### Example 1: Simple Sentiment Analysis
+
+```python
+# Simple sentiment analysis with TextBlob
+from textblob import TextBlob
+
+def analyze_sentiment(text):
+    blob = TextBlob(text)
+    
+    # Returns polarity (-1 to 1) and subjectivity (0 to 1)
+    polarity = blob.sentiment.polarity
+    
+    if polarity > 0.1:
+        return "Positive"
+    elif polarity < -0.1:
+        return "Negative"
+    else:
+        return "Neutral"
+
+# Example usage
+texts = [
+    "I love this new NLP guide!",
+    "This is terrible.",
+    "The weather is cloudy today."
+]
+
+for text in texts:
+    sentiment = analyze_sentiment(text)
+    print(f"'{text}' → {sentiment}")
+```
+
+### Example 2: Text Preprocessing Pipeline
+
+```python
+import re
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import PorterStemmer
+
+# Download required NLTK data (run once)
+# nltk.download('punkt')
+# nltk.download('stopwords')
+
+def preprocess_text(text):
+    # Convert to lowercase
+    text = text.lower()
+    
+    # Remove punctuation and numbers
+    text = re.sub(r'[^a-zA-Z\s]', '', text)
+    
+    # Tokenize
+    tokens = word_tokenize(text)
+    
+    # Remove stop words
+    stop_words = set(stopwords.words('english'))
+    tokens = [token for token in tokens if token not in stop_words]
+    
+    # Stem words
+    stemmer = PorterStemmer()
+    tokens = [stemmer.stem(token) for token in tokens]
+    
+    return tokens
+
+# Example usage
+text = "The quick brown foxes are running through the forest!"
+processed = preprocess_text(text)
+print(f"Original: {text}")
+print(f"Processed: {processed}")
+```
+
+### Example 3: Simple Text Classification
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.pipeline import Pipeline
+
+# Sample data
+texts = [
+    "I love this movie! It's amazing!",
+    "This film is terrible and boring.",
+    "Great acting and wonderful story.",
+    "Worst movie ever. Don't waste your time.",
+    "Excellent cinematography and plot.",
+    "Very disappointing. Poor script."
+]
+
+labels = ["positive", "negative", "positive", "negative", "positive", "negative"]
+
+# Create a pipeline with TF-IDF and Naive Bayes
+pipeline = Pipeline([
+    ('tfidf', TfidfVectorizer(max_features=1000, lowercase=True)),
+    ('classifier', MultinomialNB())
+])
+
+# Train the model
+pipeline.fit(texts, labels)
+
+# Test predictions
+test_texts = [
+    "This movie is fantastic!",
+    "I didn't like this film at all."
+]
+
+for text in test_texts:
+    prediction = pipeline.predict([text])[0]
+    print(f"'{text}' → {prediction}")
+```
+
+## Evaluation Metrics
+
+Understanding how well your NLP models perform is crucial for building reliable systems.
+
+### Classification Metrics
+
+**Accuracy**: Overall correctness of predictions
+```
+Accuracy = (Correct Predictions) / (Total Predictions)
+```
+
+**Precision**: Of all positive predictions, how many were actually correct?
+```
+Precision = True Positives / (True Positives + False Positives)
+```
+
+**Recall**: Of all actual positives, how many did we correctly identify?
+```
+Recall = True Positives / (True Positives + False Negatives)
+```
+
+**F1-Score**: Harmonic mean of precision and recall (balanced measure)
+```
+F1 = 2 × (Precision × Recall) / (Precision + Recall)
+```
+
+### Language Model Metrics
+
+**Perplexity**: Measures how "surprised" a model is by test data
+- Lower perplexity = better model
+- Used for language models and text generation
+
+**BLEU Score**: Evaluates machine translation quality
+- Compares generated text with reference translations
+- Scale: 0-100 (higher is better)
+
+**ROUGE Score**: Evaluates text summarization quality
+- Measures overlap between generated and reference summaries
+- Multiple variants: ROUGE-1, ROUGE-2, ROUGE-L
+
+### Practical Evaluation Example
+
+```python
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import classification_report
+
+# Example predictions vs actual labels
+y_true = ["positive", "negative", "positive", "negative", "positive"]
+y_pred = ["positive", "negative", "negative", "negative", "positive"]
+
+# Calculate metrics
+accuracy = accuracy_score(y_true, y_pred)
+precision = precision_score(y_true, y_pred, pos_label="positive")
+recall = recall_score(y_true, y_pred, pos_label="positive")
+f1 = f1_score(y_true, y_pred, pos_label="positive")
+
+print(f"Accuracy: {accuracy:.2f}")
+print(f"Precision: {precision:.2f}")
+print(f"Recall: {recall:.2f}")
+print(f"F1-Score: {f1:.2f}")
+
+# Detailed report
+print("\nDetailed Classification Report:")
+print(classification_report(y_true, y_pred))
+```
+
+### 9. Machine Translation
 This converts text from one language to another while preserving meaning.
 
 > **Note:** We touched on this in our [beginner guide](./README.md#8-machine-translation--translating-one-language-to-another). Here we'll explore the technical approaches.
@@ -82,7 +260,7 @@ This converts text from one language to another while preserving meaning.
 - Spanish: "¿Cómo estás?"
 - French: "Comment allez-vous?"
 
-### 7. Question Answering
+### 10. Question Answering
 This involves understanding questions and finding relevant answers from text.
 
 > **Note:** We covered this concept in our [beginner guide](./README.md#10-question-answering--getting-specific-answers-from-text). Here we'll explore implementation approaches.
@@ -92,7 +270,7 @@ This involves understanding questions and finding relevant answers from text.
 - Text: "Alexander Graham Bell invented the telephone in 1876."
 - Answer: "Alexander Graham Bell"
 
-### 8. Text Summarization
+### 11. Text Summarization
 This creates shorter versions of longer texts while keeping the main points.
 
 > **Note:** This concept was introduced in our [beginner guide](./README.md#9-text-summarization--making-long-text-short). Here we'll explore the technical implementation.

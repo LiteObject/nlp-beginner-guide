@@ -225,6 +225,29 @@ Super important for understanding stories and conversations!
 
 ---
 
+### 18. **TF-IDF** → Finding the special words in a document
+Imagine you're looking for what makes a recipe unique. "Flour" appears in many recipes (not special), but "saffron" appears in just this one (very special!).
+
+> Example:  
+> In a Harry Potter book: "wizard" is special  
+> In any book: "the" is boring
+
+Search engines use this to find the best results for you!
+
+---
+
+### 19. **N-grams** → Looking at word neighborhoods
+Instead of looking at words alone, we look at them with their friends!
+
+> Example:  
+> "New York City" makes more sense together than "New", "York", "City" separately  
+> "ice cream" → means dessert (together)  
+> "ice" and "cream" → frozen water and dairy (separately)
+
+Helps computers understand phrases, not just words!
+
+---
+
 ## Real-Life Examples of NLP
 
 **Autocorrect** → Fixes your typos ("teh" → "the")  
@@ -294,5 +317,8 @@ The future of NLP isn't just about making it smarter — it's about making it re
 Language is what makes us human.  
 NLP is what helps machines understand us — not perfectly yet, but getting closer every day.
 
-So next time your phone finishes your sentence, your smart speaker answers your weird question, or an AI helps you write an email...  
-Give a little nod to NLP. It's working hard for you!
+So next time your phone finishes your sentence, your smart speaker answers your weird question, or an AI helps you write an email...
+
+Remember: you're witnessing the beautiful dance between human creativity and machine intelligence. And now you understand how it works!
+
+**Welcome to the world of NLP — where computers learn to speak human.**
