@@ -96,8 +96,8 @@ Helps computers understand sentence structure.
 ### 5. **Named Entity Recognition (NER)** → Finding names of people, places, dates, etc.
 
 > Example:  
-> "Barack Obama was born in Hawaii in 1961."  
-> → Barack Obama (Person), Hawaii (Location), 1961 (Date)
+> "Apple Inc. was founded by Steve Jobs in California in 1976."  
+> → Apple Inc. (Organization), Steve Jobs (Person), California (Location), 1976 (Date)
 
 Super useful for pulling facts from text!
 
