@@ -1,0 +1,1 @@
+Natural Language Processing is a powerful field in artificial intelligence. NLP helps computers understand human language. Machine Learning and Deep Learning are core techniques in NLP. Text Preprocessing is essential for NLP tasks. Named Entity Recognition and Sentiment Analysis are popular NLP applications. Machine Learning models require large datasets for training.
