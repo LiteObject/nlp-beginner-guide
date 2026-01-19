@@ -22,6 +22,22 @@ The *harmonic mean* of Precision and Recall. It balances the trade-off between t
 *   **Formula:** `2 * (Recall * Precision) / (Recall + Precision)`
 *   **Use when:** You have an uneven class distribution or need a balance between Precision and Recall.
 
+### What is Harmonic Mean?
+The harmonic mean is a type of average that favors smaller values.
+
+**Simple Comparison:**
+*   Arithmetic mean (regular average) of 90 and 10: `(90 + 10) / 2 = 50`
+*   Harmonic mean of 90 and 10: `2 / (1/90 + 1/10) = 18`
+
+Notice how the harmonic mean (18) is much closer to the smaller value (10).
+
+**Why it matters for F1:**
+If Precision = 0.90 and Recall = 0.10:
+*   Regular average = 0.50 (looks decent)
+*   Harmonic mean (F1) = 0.18 (reveals the problem)
+
+The harmonic mean "punishes" you when either metric is low, forcing you to improve **both** Precision and Recall to get a good F1 score.
+
 ## 5. Confusion Matrix
 A table that is often used to describe the performance of a classification model. It shows the actual values versus the predicted values, breaking down True Positives, True Negatives, False Positives, and False Negatives.
 
