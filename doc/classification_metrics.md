@@ -18,7 +18,7 @@ The ratio of correctly predicted positive observations to the all observations i
 *   **Use when:** The cost of False Negatives is high (e.g., cancer detection—you don't want to miss a patient who has cancer).
 
 ## 4. F1 Score
-The weighted average of Precision and Recall. It balances the trade-off between the two.
+The *harmonic mean* of Precision and Recall. It balances the trade-off between the two. Unlike a simple average, the harmonic mean penalizes extreme differences between Precision and Recall, so both must be reasonably high for a good F1 score.
 *   **Formula:** `2 * (Recall * Precision) / (Recall + Precision)`
 *   **Use when:** You have an uneven class distribution or need a balance between Precision and Recall.
 
